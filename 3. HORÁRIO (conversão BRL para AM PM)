@@ -13,10 +13,9 @@ def conversao(horas):
 
 def impressao_hora(horas, minutos, formato):
     if formato == 'A':
-        print("{}:{:02d} A.M.".format(horas, minutos))
+        print("São {}:{:02d} A.M.".format(horas, minutos))
     elif formato == 'P':
-        print("{}:{:02d} P.M.".format(horas, minutos))
-
+        print("São {}:{:02d} P.M.".format(horas, minutos))
 
 while True:
     hora = int(input("Digite as horas no formato 24h: "))
