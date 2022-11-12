@@ -1,0 +1,8 @@
+def area(bmaior, bmenor, altura):
+    return ((bmaior+bmenor)*altura)/2
+
+base_maior = int(input("Informe a medida referente à base maior do trapézio: \n"))
+base_menor = int(input("Informe a medida referente à base menor: \n"))
+altura = int(input("Por fim, informe a altura: \n"))
+
+print(f"A área do trapézio é de {area(base_maior, base_menor, altura)} cm.")
