@@ -1,0 +1,7 @@
+def soma_imposto(taxa_imposto, custo):
+    taxa = (custo*taxa_imposto)/100
+    return custo + taxa
+
+imposto = int(input("Qual seria a taxa de imposto sobre o produto? (digite sem porcentagem) \n"))
+valor = float(input("Agora informe o valor do produto: \n"))
+print(f"O custo do produto é de {soma_imposto(imposto, valor)} reais.")
