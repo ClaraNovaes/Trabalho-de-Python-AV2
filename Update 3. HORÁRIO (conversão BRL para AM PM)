@@ -1,0 +1,31 @@
+def conversao(horas):
+    if horas == 0:
+        return 12, "A"
+    elif horas >= 1 and horas <= 11:
+        return horas, "A"
+    elif horas == 12:
+        return 12, "P"
+    elif horas >= 13 and horas <= 23:
+        return horas - 12, "P"
+
+    print("Número de horas inválido.")
+    return -1, -1
+
+def impressao_hora(horas, minutos, formato):
+    if formato == 'A':
+        print("São {}:{:02d} A.M.".format(horas, minutos))
+    elif formato == 'P':
+        print("São {}:{:02d} P.M.".format(horas, minutos))
+
+while True:
+    hora = int(input("Digite as horas no formato 24h: "))
+    if hora < 0:
+        break
+    minutos = int(input("Digite os minutos no formato 24h: "))
+    if (minutos > 60 or minutos < 0):
+        print("Número inválido. Tente novamente com um número de 0 a 59.")
+    else:
+        nova_hora, periodo = conversao(hora)
+        impressao_hora (nova_hora, minutos, periodo)
+
+print("Fim do programa.")
